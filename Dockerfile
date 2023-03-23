@@ -5,5 +5,5 @@ RUN cd /app && mvn clean install -Dskiptests
 
 
 FROM openjdk:11
-COPY --from=mybuild usr/app/myapp/target/spring-petclinic-2.7.0-SNAPSHOT.jar /
+COPY --from=mybuild /app/myapp/spring-petclinic-2.7.0-SNAPSHOT.jar /
 EXPOSE 8080
